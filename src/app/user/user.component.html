@@ -1,0 +1,39 @@
+<table *ngIf="! isregister">
+    <tr>
+        <td>UserName</td>
+        <td><input type="text" placeholder="Enter Username" [(ngModel)]="log.username"> </td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td><input type="text" placeholder="Enter Password" [(ngModel)]="log.password"> </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="button" value="login" (click)="login()"> </td>
+    </tr>
+    <tr>
+        <td><a (click)="reg()" >new user? SIGNIN</a></td>
+    </tr>
+</table>
+<table *ngIf="isregister">
+    <tr>
+        <td>UserName</td>
+        <td><input type="text" placeholder="Enter Username" [(ngModel)]="log.username"> </td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td><input type="text" placeholder="Enter Password" [(ngModel)]="log.password"> </td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><input type="text" placeholder="Enter Email" [(ngModel)]="log.email"> </td>
+    </tr>
+    <tr>
+        <td>PhoneNumber</td>
+        <td><input type="text" placeholder="Enter PhoneNumber" [(ngModel)]="log.phone"> </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="button" value="Register" (click)="register()"> </td>
+    </tr>
+</table>

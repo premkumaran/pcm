@@ -1,0 +1,12 @@
+<table>
+<tr>
+<td><a routerLink="/add">Category</a></td> 
+<td></td>
+<td><a routerLink="/add">Product</a></td>
+</tr>
+</table>
+<table>
+    <tr *ngFor="let c of product">
+    <td>{{c.name}}</td>
+</tr>
+</table>

@@ -1,0 +1,42 @@
+<table *ngIf="! iscategory && ! isproduct">
+    <tr>
+        <td>Category Type</td>
+    </tr>
+    <tr>
+        <td>Category Name</td>
+        <td><input type="text" placeholder="Enter category name" [(ngModel)]="name"> </td>
+        <td><input type="button" value="add" (click)="Add()"></td>
+    </tr>
+</table>
+<table *ngIf="iscategory ">
+    <tr>
+        <td>Product</td>
+    </tr>
+    <tr>
+        <td>Category List</td>
+        <td>
+            <select>
+                <option *ngFor="let s of cat">{{s.name}}</option>
+            </select>
+        </td>
+        <td><input type="button" value="go to category" (click)="go()"></td>
+        
+        
+    </tr>
+    <tr>
+        <td>Product Name</td>
+        <td><input type="text" placeholder="Enter product name" [(ngModel)]="pname"> </td>
+        
+    </tr>
+    <tr>
+        <td>Product price</td>
+        <td><input type="text" placeholder="Enter product price" [(ngModel)]="price"> </td>
+        
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="button" value="add" (click)="Added()"> </td>
+        
+    </tr>
+
+</table>
